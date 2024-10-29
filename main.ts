@@ -7,7 +7,7 @@
 
 //variables
 let neopixelStrip: neopixel.Strip = null
-let countdown: number = 4
+let countdown: number = 0
 
 //setup
 basic.showIcon(IconNames.Happy)
@@ -28,12 +28,12 @@ input.onButtonPressed(Button.A, function () {
     neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Red))
     neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Red))
     //countdown loop
-    while (countdown > 0) {
+    while (countdown >= 0) {
         basic.showNumber(countdown)
         neopixelStrip.show()
         basic.pause(500)
-        neopixelStrip.setPixelColor(countdown, neopixel.colors(NeoPixelColors.Red))
         countdown = countdown - 1
+        neopixelStrip.setPixelColor(countdown, neopixel.colors(NeoPixelColors.Black))
     }
     basic.showIcon(IconNames.Happy)
 })
