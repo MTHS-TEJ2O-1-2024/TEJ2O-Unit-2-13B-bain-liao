@@ -27,6 +27,7 @@ input.onButtonPressed(Button.A, function () {
     neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Red))
     neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Red))
     neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Red))
+    
     //countdown loop
     while (countdown >= 0) {
         basic.showNumber(countdown)
